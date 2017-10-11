@@ -1,4 +1,3 @@
-#!/usr/bin/ansible-playbook
 ---
 #
 #      Copyright (c) 2016 F5 Networks
@@ -44,7 +43,7 @@
       server: "{{server}}"
       user: "{{setup_user}}"
       password: "{{setup_pass}}"
-      state: "absent"
+      state: "present"
 #      state: "absent"
  #State "absent" will remove the application 
     delegate_to: localhost

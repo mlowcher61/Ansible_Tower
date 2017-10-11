@@ -1,4 +1,3 @@
-#!/usr/bin/ansible-playbook
 ---
 #
 #      Copyright (c) 2016 F5 Networks
@@ -13,4 +12,4 @@
 
      tasks:
        - name: push jq
-         copy: src=./jq dest=/config/ mode=755      
+         copy: src=./files/jq dest=/config/ mode=755      
