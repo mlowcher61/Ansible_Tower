@@ -1,0 +1,19 @@
+---
+- name: Provisioning ASM
+  hosts: bigip
+  gather_facts: false
+  vars:
+   username: admin
+   password: admin
+
+  tasks:
+
+  - name: Provision BIG-IP with appropriate modules
+    bigip_provision:
+      server: bigip
+      user: "{{username}}"
+      password: "{{password}}"
+      validate_certs: False
+      module: asm
+      level: nominal
+    delegate_to: localhost
