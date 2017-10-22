@@ -17,7 +17,7 @@
   vars:
     setup_user: admin
     setup_pass: admin
-    bigip: 10.0.0.40
+    bigip: 10.0.0.162
 
   tasks: 
    - name: Pushing the certificate and key to the F5
