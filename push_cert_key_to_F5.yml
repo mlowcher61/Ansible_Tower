@@ -11,7 +11,7 @@
 #      
 
 - name: Push PEM Certificate and key
-  hosts: "{{f5_single}}"
+  hosts: all
   connection: local
   gather_facts: False
 
@@ -19,7 +19,7 @@
    - name: Pushing the certificate and key to the F5
      bigip_ssl_certificate:
          state: "present"
-         server: "{{f5_single}}"
+         server: all
          user: "{{bigip_pass}}"
          password: "{{bigip_pass}}"
          name: "kenyon2"
