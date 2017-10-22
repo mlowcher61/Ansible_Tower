@@ -1,6 +1,6 @@
 ---
 - name: Set up a BIG-IP HA pair
-  hosts: localhost
+  hosts: all
   gather_facts: false
 
   vars:
@@ -61,31 +61,31 @@
       - mv cm device {{ bigip2_old_name }} {{ bigip2_new_name }}
     delegate_to: localhost
 
-#  - name: Create external vlan
-#    bigip_vlan
-#      name: "external"
-#      user: "{{ setup_user }}"
-#      password: "{{ setup_pass }}"
-#      server: "{{ item.server }}"
-#      validate_certs: False
-#    delegate_to: localhost
-#    with_items: 
-#      - server
-#        "{{ bigip1_ip }}"
-#        "{{ bigip2_ip }}"
+  - name: Create external vlan
+    bigip_vlan
+      name: "external"
+      user: "{{ setup_user }}"
+      password: "{{ setup_pass }}"
+      server: "{{ item.server }}"
+      validate_certs: False
+    delegate_to: localhost
+    with_items: 
+      - server
+        "{{ bigip1_ip }}"
+        "{{ bigip2_ip }}"
 
-#  - name: Create internal vlan
-#    bigip_vlan
-#      name: "internal"
-#      user: "{{ setup_user }}"
-#      password: "{{ setup_pass }}"
-#      server: "{{ item.server }}"
-#      validate_certs: False
-#    delegate_to: localhost
-#    with_items:
-#     - server
-#       "{{ bigip1_ip }}"
-#       "{{ bigip2_ip }}"
+  - name: Create internal vlan
+    bigip_vlan
+      name: "internal"
+      user: "{{ setup_user }}"
+      password: "{{ setup_pass }}"
+      server: "{{ item.server }}"
+      validate_certs: False
+    delegate_to: localhost
+    with_items:
+     - server
+       "{{ bigip1_ip }}"
+       "{{ bigip2_ip }}"
 
   - name: Set config sync address on BIG-IP1
     bigip_command:

@@ -13,20 +13,18 @@
 #      10.0.0.101
 #
 
-  - hosts: loadbalancer[0]
+  - hosts: bigip[0]
     tasks:
       - name: License Big-IP
-        raw: /usr/local/bin/SOAPLicenseClient --interactive  --basekey JHSYR-BRFGA-HXGJN-GJOGI-AGAKNVY
+        raw: /usr/local/bin/SOAPLicenseClient --interactive  --basekey NLLLK-SVXNK-DOBPQ-MMKGR-UMTCFHK
 
-  - hosts: loadbalancer[1]
+  - hosts: bigip[1]
     tasks:
       - name: License Big-IP
-        raw: /usr/local/bin/SOAPLicenseClient --interactive  --basekey HCEIR-XMCLF-VHJIC-DXSZY-ATXMDIF
+        raw: /usr/local/bin/SOAPLicenseClient --interactive  --basekey UIKGF-YOYBU-UKNEY-BLSQJ-GBGIEVU
 
 
 
 # Back up licenses
-# NLLLK-SVXNK-DOBPQ-MMKGR-UMTCFHK
-# UIKGF-YOYBU-UKNEY-BLSQJ-GBGIEVU
 # VBTDD-VYLLL-JZFEM-WUVQY-SKKZZAF
 # TXXRI-JKBDW-HKDSF-JNVBY-VFRERUN
