@@ -20,8 +20,8 @@
      bigip_ssl_certificate:
          state: "present"
          server: all
-         user: "{{inventories}}"
-         password: "{{inventories}}"
+         user: bigip_pass
+         password: bigip_pass
          name: "kenyon2"
          cert_src: "/var/tmp/kenyon2.crt"
          key_src: "/var/tmp/kenyon2.key"
