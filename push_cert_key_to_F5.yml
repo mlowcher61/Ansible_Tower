@@ -11,6 +11,7 @@
 #      
 
 - name: Push PEM Certificate and key
+  hosts: "{{inventory}}"
   connection: local
   gather_facts: False
 
