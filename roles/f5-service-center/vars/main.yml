@@ -1,0 +1,11 @@
+---
+# vars file for f5-service-center
+- hosts: bigip[0]
+roles:
+- { role: "f5-service-center" }
+username: admin
+password: admin
+profile_name: kenyon2
+cert_name: kenyon2.crt
+key_name: kenyon2.key
+
