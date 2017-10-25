@@ -4,8 +4,8 @@
     server: "{{inventory}}"
     user: "{{username}}"
     password: "{{password}}"
-    name: "kenyon2"
-    cert_src: "kenyon2.crt"
-    key_src: "kenyon2.key"
+    name: "profile_name"
+    cert_src: "cert_name"
+    key_src: "key_name"
     validate_certs: "no"
   delegate_to: localhost
