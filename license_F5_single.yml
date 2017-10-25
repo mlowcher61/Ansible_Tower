@@ -1,6 +1,0 @@
----
-  - hosts: iworkflow
-    tasks:
-      - name: License Big-IP
-        raw: /usr/local/bin/SOAPLicenseClient --interactive  --basekey AJIS-DZUI-DQDT-XEXM-ZJDYQPG
-

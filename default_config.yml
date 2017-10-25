@@ -1,5 +1,0 @@
----
-  - hosts: bigip
-    tasks:
-      - name: Restore configuration to factory default
-        raw: tmsh load sys config default 
