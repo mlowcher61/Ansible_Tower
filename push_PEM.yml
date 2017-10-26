@@ -8,7 +8,7 @@
    - name: Use a file lookup to import PEM Certificate
      bigip_ssl_certificate:
        name: "kenkar2"
-       server: bigip
+       server: "{{bigip}}"
        user: "{{username}}"
        password: "{{password}}"
        state: "present"
