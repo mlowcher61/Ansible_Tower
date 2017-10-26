@@ -1,0 +1,16 @@
+---
+- hosts: bigip
+  connection: local
+  gather_facts: no
+
+  tasks:
+
+   - name: Use a file lookup to import key
+     bigip_ssl_key:
+       name: "{{key_cert_name}}"
+       server: bigip
+       user: "{{username}}"
+       password: "{{password}}"
+       state: present
+       content: "{{ lookup('file', './f5-service-center/files/"{{key_name}}"') }}"
+     delegate_to: localhost
