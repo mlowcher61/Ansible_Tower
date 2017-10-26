@@ -1,4 +1,5 @@
 ---
 # vars file for f5-service-center
-include push_cert_key_to_f5.yml
+- hosts 10.1.1.10
+- include: push_cert_key_to_f5.yml
 
