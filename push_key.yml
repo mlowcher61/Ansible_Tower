@@ -7,10 +7,10 @@
 
    - name: Use a file lookup to import key
      bigip_ssl_key:
-       name: "{{key_cert_name}}"
+       name: kenkar2
        server: bigip
        user: "{{username}}"
        password: "{{password}}"
        state: present
-       content: "{{ lookup('file', './f5-service-center/files/"{{key_name}}"') }}"
+       content: "{{ lookup('file', './f5-service-center/files/kenkar2.key') }}"
      delegate_to: localhost
