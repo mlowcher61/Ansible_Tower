@@ -8,7 +8,7 @@
    - name: Pushing the certificate and key to the F5
      bigip_ssl_certificate:
        state: "present"
-       server: "{{inventory}}"
+       server: "{{bigip}}"
        user: "{{username}}"
        password: "{{password}}"
        name: "profile_name"
