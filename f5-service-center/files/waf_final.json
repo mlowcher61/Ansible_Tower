@@ -320,7 +320,7 @@
 		},
 		{
 			"name": "vs__ProfileClientSSL",
-			"value": "/Common/kenyon2_clientssl",
+			"value": "/Common/kenkar2_clientssl",
 			"encrypted": "no"
 		},
 		{
@@ -330,7 +330,7 @@
 		},
 		{
 			"name": "vs__ProfileClientSSLCert",
-			"value": "/Common/kenyon2.crt",
+			"value": "/Common/kenkar2.crt",
 			"encrypted": "no"
 		},
 		{
@@ -345,7 +345,7 @@
 		},
 		{
 			"name": "vs__ProfileClientSSLKey",
-			"value": "/Common/kenyon2.key",
+			"value": "/Common/kenkar2.key",
 			"encrypted": "no"
 		},
 		{

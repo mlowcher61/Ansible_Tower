@@ -1,5 +1,5 @@
 ---
-- hosts: 10.1.1.10
+- hosts: all
   connection: local
   gather_facts: no
 
@@ -9,7 +9,7 @@
     server: "{{server}}"
     user: "{{username}}"
     password: "{{password}}"
-    content: "{{ lookup('file', '/var/tmp/appsvcs_integration_v2.0.004_test.tmpl') }}"
+    content: "{{ lookup('file', 'appsvcs_integration_v2.0.004_test.tmpl') }}"
     state: "present"
     validate_certs: False
   delegate_to: localhost
@@ -24,4 +24,5 @@
     user: "{{username}}"
     password: "{{password}}"
     state: "present"
+    validate_certs: False
   delegate_to: localhost
