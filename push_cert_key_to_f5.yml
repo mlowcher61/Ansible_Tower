@@ -3,14 +3,14 @@
   connection: local
   gather_facts: no
 
-- name: Pushing the certificate and key to the F5
-  bigip_ssl_certificate:
-    state: "present"
-    server: "{{inventory}}"
-    user: "{{username}}"
-    password: "{{password}}"
-    name: "profile_name"
-    cert_src: "cert_name"
-    key_src: "key_name"
-    validate_certs: "no"
-#  delegate_to: localhost
+  - name: Pushing the certificate and key to the F5
+    bigip_ssl_certificate:
+      state: "present"
+      server: "{{inventory}}"
+      user: "{{username}}"
+      password: "{{password}}"
+      name: "profile_name"
+      cert_src: "cert_name"
+      key_src: "key_name"
+      validate_certs: "no"
+    delegate_to: localhost
