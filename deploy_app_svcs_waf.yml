@@ -1,4 +1,7 @@
 ---
+- hosts: 10.1.1.10
+  connection: local
+  gather_facts: no
 
 #Upload the iApp templated downloaded above to the BIG-IP
 - name: Upload iApp template to BIG-IP
