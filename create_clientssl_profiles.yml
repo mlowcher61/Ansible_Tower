@@ -16,7 +16,7 @@
      icontrol_install_config: 
        method: "_post_"
        uri: "/mgmt/tm/ltm/profile/client-ssl"
-       body: '{"name":"{{profile_name}}","cert":"{{cert_name}}","key":"{{key_name}}"}'
+       body: '{"name":"{{key_cert_name}}","cert":"{{cert_name}}","key":"{{key_name}}"}'
        host: "{{bigip}}"
        username: "{{username}}"
        password: "{{password}}"
