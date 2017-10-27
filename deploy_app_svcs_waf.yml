@@ -10,7 +10,7 @@
         server: "{{bigip}}"
         user: "{{username}}"
         password: "{{password}}"
-        content: "{{ lookup('file', 'appsvcs_integration_v2.0.004_test.tmpl') }}"
+        content: "{{ lookup('file', './f5-service-center/files/appsvcs_integration_v2.0.004_test.tmpl') }}"
         state: "present"
         validate_certs: False
       delegate_to: localhost
@@ -19,7 +19,7 @@
       bigip_iapp_service:
         name: "cust1-waf"
         template: "appsvcs_integration_v2.0.004_test"
-        parameters: "{{ lookup('file', 'waf_final.json') }}"
+        parameters: "{{ lookup('file', './f5-servcie-center/files/waf_final.json') }}"
         server: "{{bigip}}"
         user: "{{username}}"
         password: "{{password}}"
