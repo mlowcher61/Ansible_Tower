@@ -11,6 +11,6 @@
       server: "{{bigip}}"
       user: "{{username}}"
       password: "{{password}}"
-      command:
+      commands:
       - create ltm profile client-ssl kenkar2_clientssl key kenkar2.key cert kenkar2.crt
      delegate_to: localhost
