@@ -11,6 +11,6 @@
       server: "{{bigip}}"
       user: "{{username}}"
       password: "{{password}}"
-      command:
+      commands:
       - load sys config default 
      delegate_to: localhost

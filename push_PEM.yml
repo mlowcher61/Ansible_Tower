@@ -5,14 +5,14 @@
 
   tasks:
 
-   - name: Use a file lookup to import PEM Certificate
-     bigip_ssl_certificate:
-       name: "kenkar2"
-       server: "{{bigip}}"
-       user: "{{username}}"
-       password: "{{password}}"
-       state: "present"
-       cert_content: "{{ lookup('file', './f5-service-center/files/kenkar2.crt') }}"
-       key_content: "{{ lookup('file', './f5-service-center/files/kenkar2.key') }}"
-     delegate_to: localhost
+    - name: Use a file lookup to import PEM Certificate
+      bigip_ssl_certificate:
+        name: "kenkar2"
+        server: "{{bigip}}"
+        user: "{{username}}"
+        password: "{{password}}"
+        state: "present"
+        cert_content: "{{ lookup('file', './f5-service-center/files/kenkar2.crt') }}"
+        key_content: "{{ lookup('file', './f5-service-center/files/kenkar2.key') }}"
+      delegate_to: localhost
 
