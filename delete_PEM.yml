@@ -10,6 +10,7 @@
         server: "{{bigip}}"
         user: "{{username}}"
         password: "{{password}}"
+        validate_certs: False
         commands:
         - bash /util rm /home/cloudadmin/certkeys/"{{PEM}}"
       delegate_to: localhost
