@@ -11,7 +11,7 @@
         user: "{{username}}"
         password: "{{password}}"
         content: "{{ lookup('file', './f5-service-center/files/appsvcs_integration_v2.0.004_test.tmpl') }}"
-        state: "{{state}}"
+        state: present
         validate_certs: False
       delegate_to: localhost
 
