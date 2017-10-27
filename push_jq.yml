@@ -1,9 +1,0 @@
----
-
-- hosts: all
-  connection: local
-  gather_facts:no
-
-  tasks:
-    - name: push jq
-      copy: src=./jq dest=/config/ mode=755

@@ -12,7 +12,7 @@
         user: "{{username}}"
         password: "{{password}}"
         state: "{{state}}"
-        cert_content: "{{ lookup('file', './f5-service-center/files/kenkar2.crt') }}"
-        key_content: "{{ lookup('file', './f5-service-center/files/kenkar2.key') }}"
+        cert_content: "{{ lookup('file', '/home/cloudadmin/certkeys/kenkar2.crt') }}"
+        key_content: "{{ lookup('file', '/home/cloudadmin/certkeys/kenkar2.key') }}"
       delegate_to: localhost
 

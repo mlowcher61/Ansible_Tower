@@ -1,0 +1,15 @@
+---
+- hosts: all
+  connection: local
+  gather_facts: no
+
+  tasks:
+
+    - name: Deleting certificate and private key
+      bigip_command:
+        server: "{{bigip}}"
+        user: "{{username}}"
+        password: "{{password}}"
+        commands:
+        - bash /util rm  "{{PEM}}"
+      delegate_to: localhost
