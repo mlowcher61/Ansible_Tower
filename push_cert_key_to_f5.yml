@@ -1,5 +1,5 @@
 ---
-- hosts: bigip
+- hosts: all
   connection: local
   gather_facts: no
 
