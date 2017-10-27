@@ -5,9 +5,9 @@
 
   tasks:
 
-   - name: Create a client SSL profile with a cert/key/specific ciphers
+   - name: Create a client SSL profile with a cert/key
      bigip_command:
-      state: present
+      state: "{{state}}"
       server: "{{bigip}}"
       user: "{{username}}"
       password: "{{password}}"
