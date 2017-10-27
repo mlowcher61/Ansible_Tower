@@ -4,6 +4,6 @@
   connection: local
   gather_facts:no
 
-    tasks:
-     - name: push jq
-       copy: src=./jq dest=/config/ mode=755
+  tasks:
+   - name: push jq
+     copy: src=./jq dest=/config/ mode=755
