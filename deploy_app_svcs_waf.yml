@@ -7,7 +7,7 @@
 
     - name: Upload iApp template to BIG-IP
       bigip_iapp_template:
-        server: "{{server}}"
+        server: "{{bigip}}"
         user: "{{username}}"
         password: "{{password}}"
         content: "{{ lookup('file', 'appsvcs_integration_v2.0.004_test.tmpl') }}"
@@ -20,7 +20,7 @@
         name: "cust1-waf"
         template: "appsvcs_integration_v2.0.004_test"
         parameters: "{{ lookup('file', 'waf_final.json') }}"
-        server: "{{inventory}}"
+        server: "{{bigip}}"
         user: "{{username}}"
         password: "{{password}}"
         state: "present"
