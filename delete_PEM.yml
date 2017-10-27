@@ -11,5 +11,5 @@
         user: "{{username}}"
         password: "{{password}}"
         commands:
-        - bash /util rm  "{{PEM}}"
+        - bash /util rm /home/cloudadmin/certkeys/"{{PEM}}"
       delegate_to: localhost
