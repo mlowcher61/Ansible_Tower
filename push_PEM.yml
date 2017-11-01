@@ -12,7 +12,7 @@
         user: "{{username}}"
         password: "{{password}}"
         state: "{{state}}"
-        cert_content: "{{ lookup('file', '/home/tower/certkeys/kenkar2.crt') }}"
-        key_content: "{{ lookup('file', '/home/tower/certkeys/kenkar2.key') }}"
+        cert_content: "{{ lookup('file', '/home/tower/kenkar2.crt') }}"
+        key_content: "{{ lookup('file', '/home/tower/kenkar2.key') }}"
       delegate_to: localhost
 
